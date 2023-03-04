@@ -2,13 +2,30 @@ Class {
 	#name : #LOGame,
 	#superclass : #BorderedMorph,
 	#instVars : [
-		'cells'
+		'cells',
+		'cellsPerSide'
+	],
+	#classVars : [
+		'cellsPerSide'
 	],
 	#category : #'PBE-LightsOut'
 }
 
+{ #category : #'as yet unclassified' }
+LOGame class >> example10 [ 
+	" Logame new.  "
+	(LOGame new cellsPerSide: 20) openInHand
+]
+
+{ #category : #'as yet unclassified' }
+LOGame class >> example20 [
+	" LOGame example20 "
+	(LOGame new cellsPerSide: 20) openInHand
+]
+
 { #category : #initialization }
 LOGame >> cellsPerSide [
+	"The number of cells along each side of the game"
 	^10
 ]
 
@@ -24,7 +41,7 @@ LOGame >> initialize [
 	cells := Array2D new:n tabulate: [ :i :j| self newCellAt: i at: j ]  
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'event handling' }
 LOGame >> mouseMove: anEvent [
 ]
 

@@ -24,7 +24,7 @@ LOCell >> mouseAction: aBlock [
 	mouseAction := aBlock
 ]
 
-{ #category : #'game logic' }
+{ #category : #'event handling' }
 LOCell >> mouseUp: anEvent [
 	mouseAction value 
 ]
